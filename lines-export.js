@@ -22,7 +22,7 @@ function Lines() {
   this.curve = null;
   this.fov = 75;
   this.variants = [];
-  this.animating = true;
+  this.animating = false;
 }
 
 Lines.prototype.createFilter = function() {

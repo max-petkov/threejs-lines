@@ -237,7 +237,7 @@ Lines.prototype.init = function () {
   this.createGUI();
   this.resize();
   this.animate();
-  this.showLines();
+  //this.showLines();
 };
 
 export {Lines, THREE};

@@ -21,8 +21,8 @@ function Lines() {
   };
   this.curve = null;
   this.fov = 75;
-  
   this.variants = [];
+  this.animating = true;
 }
 
 Lines.prototype.createFilter = function() {
@@ -167,6 +167,9 @@ Lines.prototype.createControls = function () {
 Lines.prototype.animate = function () {
 
   gsap.ticker.add((time) => {
+    if(!this.animating) return;
+    console.log("Animating...");
+    
     for (let i = 0; i < this.lines.length; i++) {
       const material = this.lines[i].material;
       material.uniforms.uTime.value = time;      

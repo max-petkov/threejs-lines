@@ -180,6 +180,7 @@ Lines.prototype.animate = function (cb) {
 */
 };
 
+/*
 Lines.prototype.showLines = function() {
   this.draw = {value: 0};
 
@@ -203,6 +204,8 @@ Lines.prototype.drawLine = function() {
     position.needsUpdate = true;
   }
 }
+
+*/
 
 Lines.prototype.createGUI = function() {
   const gui = new GUI();

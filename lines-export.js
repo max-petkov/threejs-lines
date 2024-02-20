@@ -4,7 +4,7 @@ import { RenderPass } from "https://cdn.jsdelivr.net/npm/three@0.121.1/examples/
 import { EffectComposer } from "https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/postprocessing/EffectComposer.js";
 import { UnrealBloomPass } from "https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/postprocessing/UnrealBloomPass.js";
 import { gsap } from "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js";
-import { ScrollTrigger } from "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js";
+//import { ScrollTrigger } from "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js";
 import GUI from 'https://cdn.jsdelivr.net/npm/lil-gui@0.19/+esm';
 
 function Lines() {
@@ -241,4 +241,4 @@ Lines.prototype.init = function () {
   //this.showLines();
 };
 
-export {Lines, THREE, gsap, ScrollTrigger};
+export {Lines, THREE, gsap};

@@ -241,4 +241,4 @@ Lines.prototype.init = function () {
   //this.showLines();
 };
 
-export {Lines, THREE, gsap};
+export {Lines, THREE};

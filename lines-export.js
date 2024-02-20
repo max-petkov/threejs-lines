@@ -3,7 +3,7 @@ import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.121.1/exampl
 import { RenderPass } from "https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/postprocessing/RenderPass.js";
 import { EffectComposer } from "https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/postprocessing/EffectComposer.js";
 import { UnrealBloomPass } from "https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/postprocessing/UnrealBloomPass.js";
-import { gsap } from "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js";
+import { gsap } from "https://cdn.jsdelivr.net/npm/gsap@3.12.5/+esm";
 //import { ScrollTrigger } from "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js";
 import GUI from 'https://cdn.jsdelivr.net/npm/lil-gui@0.19/+esm';
 

@@ -241,7 +241,7 @@ Lines.prototype.init = function () {
   this.createFilter();
   this.createGUI();
   this.resize();
-  this.animate();
+  //this.animate();
   //this.showLines();
 };
 

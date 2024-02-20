@@ -164,8 +164,9 @@ Lines.prototype.createControls = function () {
   this.controls = new OrbitControls(this.camera, this.canvas);
 };
 
-Lines.prototype.animate = function () {
-
+Lines.prototype.animate = function (cb) {
+  cb();
+  /*
   gsap.ticker.add((time) => {
     if(!this.animating) return;
     
@@ -176,9 +177,13 @@ Lines.prototype.animate = function () {
 
     this.effectComposer.render();
   });
+
+  */
 };
 
-Lines.prototype.showLines = function() {
+Lines.prototype.showLines = function(cb) {
+  cb();
+  /*
   this.draw = {value: 0};
 
   gsap.to(this.draw, {
@@ -187,6 +192,7 @@ Lines.prototype.showLines = function() {
     ease: Power1.easeInOut,
     onUpdate: () => this.drawLine(),
   })
+  */
 }
 
 Lines.prototype.drawLine = function() {

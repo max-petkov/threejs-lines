@@ -168,7 +168,6 @@ Lines.prototype.animate = function () {
 
   gsap.ticker.add((time) => {
     if(!this.animating) return;
-    console.log("Animating...");
     
     for (let i = 0; i < this.lines.length; i++) {
       const material = this.lines[i].material;

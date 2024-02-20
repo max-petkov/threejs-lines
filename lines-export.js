@@ -3,6 +3,8 @@ import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.121.1/exampl
 import { RenderPass } from "https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/postprocessing/RenderPass.js";
 import { EffectComposer } from "https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/postprocessing/EffectComposer.js";
 import { UnrealBloomPass } from "https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/postprocessing/UnrealBloomPass.js";
+import { gsap } from "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js";
+import { ScrollTrigger } from "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js";
 import GUI from 'https://cdn.jsdelivr.net/npm/lil-gui@0.19/+esm';
 
 function Lines() {
@@ -164,9 +166,7 @@ Lines.prototype.createControls = function () {
   this.controls = new OrbitControls(this.camera, this.canvas);
 };
 
-Lines.prototype.animate = function (cb) {
-  cb();
-  /*
+Lines.prototype.animate = function () {
   gsap.ticker.add((time) => {
     if(!this.animating) return;
     
@@ -178,12 +178,9 @@ Lines.prototype.animate = function (cb) {
     this.effectComposer.render();
   });
 
-  */
 };
 
-Lines.prototype.showLines = function(cb) {
-  cb();
-  /*
+Lines.prototype.showLines = function() {
   this.draw = {value: 0};
 
   gsap.to(this.draw, {
@@ -192,7 +189,6 @@ Lines.prototype.showLines = function(cb) {
     ease: Power1.easeInOut,
     onUpdate: () => this.drawLine(),
   })
-  */
 }
 
 Lines.prototype.drawLine = function() {
@@ -245,4 +241,4 @@ Lines.prototype.init = function () {
   //this.showLines();
 };
 
-export {Lines, THREE};
+export {Lines, THREE, gsap, ScrollTrigger};

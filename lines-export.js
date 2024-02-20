@@ -64,7 +64,7 @@ Lines.prototype.createLines = function () {
     const curve = new THREE.CatmullRomCurve3(this.variants[i].curve);
     let geometry = new THREE.TubeGeometry(curve, tubularSegments, radius, radialSegments, false);
     geometry = new THREE.BufferGeometry().fromGeometry(geometry);
-    geometry.setDrawRange(0, 0);
+    //geometry.setDrawRange(0, 0);
 
     const material = new THREE.ShaderMaterial({ 
       uniforms:{

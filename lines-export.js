@@ -164,7 +164,9 @@ Lines.prototype.createControls = function () {
   this.controls = new OrbitControls(this.camera, this.canvas);
 };
 
-Lines.prototype.animate = function () {
+Lines.prototype.animate = function (cb) {
+  cb();
+  /*
   gsap.ticker.add((time) => {
     if(!this.animating) return;
     
@@ -175,7 +177,7 @@ Lines.prototype.animate = function () {
 
     this.effectComposer.render();
   });
-
+*/
 };
 
 Lines.prototype.showLines = function() {
@@ -235,7 +237,7 @@ Lines.prototype.init = function () {
   this.createFilter();
   this.createGUI();
   this.resize();
-  this.animate();
+  //this.animate();
   //this.showLines();
 };
 

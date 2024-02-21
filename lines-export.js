@@ -1,9 +1,8 @@
 import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.121.1/build/three.module.js";
-import { OrbitControls } from "https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/controls/OrbitControls.js";
 import { RenderPass } from "https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/postprocessing/RenderPass.js";
 import { EffectComposer } from "https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/postprocessing/EffectComposer.js";
 import { UnrealBloomPass } from "https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/postprocessing/UnrealBloomPass.js";
-import GUI from 'https://cdn.jsdelivr.net/npm/lil-gui@0.19/+esm';
+//import GUI from 'https://cdn.jsdelivr.net/npm/lil-gui@0.19/+esm';
 
 function Lines() {
   this.canvas = document.querySelector("canvas");
@@ -209,6 +208,8 @@ Lines.prototype.drawLine = function() {
 
 Lines.prototype.createGUI = function() {
   const gui = new GUI();
+  if(!gui) return;
+  
   const bloomFolder = gui.addFolder( 'Bloom' );
   const toneMappingFolder = gui.addFolder( 'Tone Mapping' );
 
@@ -238,10 +239,10 @@ Lines.prototype.init = function () {
   this.createLines();
   this.createRenderer();
   this.createFilter();
-  this.createGUI();
+  //this.createGUI();
   this.resize();
   //this.animate();
   //this.showLines();
 };
 
-export {Lines, THREE};
+export {Lines, THREE, RenderPass, EffectComposer, UnrealBloomPass};
